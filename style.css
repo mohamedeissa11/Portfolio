@@ -128,7 +128,7 @@ header nav .social-links a i:hover{
 }
 /*___________________________________Main____________________________*/
 #section_2{
-    background-color: #aaa;
+    background:url(/images/backgr.png);
     
     height: 100vh;
     background-size: cover;
