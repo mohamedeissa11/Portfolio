@@ -3,16 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" >
 </head>
 <body>
     <div id="Controller">
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <header id="section_1">
+            <nav>
+                <a href="#" class="logo">Mohamed Eissa</a>
+                <ul class="links">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <i id="btnMenu" class="fa-solid fa-bars"></i>
+          
 
+            </nav>
+
+
+        </header>
+        <main id ="section_2">
+            <div class="container">
+                <div class="div-text">
+                    <h1>Mohamed Eissa</h1>
+                    <span>Backend Developer</span>
+                    <p>                      I'm Mohamed Eissa, a 21-year-old final year Computer Science student 
+                        specializing in backend development. With strong expertise 
+                        in server-side technologies and database architecture, 
+                        I build robust and scalable web applications. Currently 
+                        expanding my knowledge in cloud computing and microservices 
+                        as I complete my Bachelor's degree.
+                    </p>
+                    <a href="#" class="btn">View CV</a>
+
+                </div>
+                <div class="div-img">
+                    <img src="/images" alt="">
+
+                </div>
+            </div>
+           
+
+
+
+             
+
+
+
+            
+            
+
+
+
+           
+
+
+        </main>
+
+
+
+            <section id="skills" class="content-section">
+                <div class="container">
+                    <h2>Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Programming Languages</h3>
+                            <ul>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>PHP</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Backend Frameworks</h3>
+                            <ul>
+                                <li>Laravel</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Databases</h3>
+                            <ul>
+                                <li>SQL (PostgreSQL, MySQL)</li>
+                                <li>NoSQL (MongoDB)</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Tools & Technologies</h3>
+                            <ul>
+                                <li>Git/GitHub</li>
+                                <li>Bootstrap</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!-- Projects Section -->
+            <section id="projects" class="content-section">
+                <div class="container">
+                    <h2>Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3>store website</h3>
+                            <p>Store for hardwares</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                                     
+                    </div>
+                </div>
+            </section>
+
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fa-solid fa-envelope"></i> mohamedeysa32@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +201023718758</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About Me</h2>
+                    
+                <div class="about-details">
+                    <p><strong>Name:</strong> Mohamed Eissa</p>
+                    <p><strong>Age:</strong> 21</p>
+                    <p><strong>Degree:</strong> Bachelor's in Computer Science</p>
+                    <p><strong>Email:</strong> mohamedeysa32@gmail.com</p>
+                    <p><strong>Phone:</strong> +201023718758</p>
+                </div>
+            </div>
+        </section>    
+
+
+
+
+
+
+        <footer id="section_3">
+            <p>&copy; 2025 Mohamed Eissa. All rights reserved.</p>
+            
+        </footer>
+        <script>
+            let btnMenu = document.getElementById("btnMenu");
+            let NavLinks = document.querySelector(".links");
+
+            btnMenu.onclick = function(){
+                btnMenu.classList.toggle("fa-times")
+                NavLinks.classList.toggle("active")
+            }
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+
+
+
+      
     </div>
+   
+        
+    
     
 </body>
 </html>
